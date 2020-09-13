@@ -7,11 +7,13 @@ import { loadAsync } from "expo-font";
 import ShopNavigator from "./navigation/ShopNavigator";
 import productsReducer from "./store/reducers/products.reducer";
 import cartReducer from "./store/reducers/cart.reducer";
+import orderReducer from "./store/reducers/order.reducer";
 // import { composeWithDevTools } from "redux-devtools-extension";
 
 const rootReducer = combineReducers({
   products: productsReducer,
   cart: cartReducer,
+  orders: orderReducer,
 });
 
 const store = createStore(rootReducer);
